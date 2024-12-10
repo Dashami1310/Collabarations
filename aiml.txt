@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 void insert_end() 
 { 
 NODE nw,p; 
@@ -24,3 +25,117 @@ p=p->next;
 p->next=nw; 
 } 
 }
+=======
+<<<<<<< HEAD
+void delet_front()
+{
+NODE temp;
+if(first==NULL)
+printf("list is empty\n");
+else
+{
+temp=first;
+first=temp->next;
+printf("\nthe deleted student usn is:
+%s",temp->usn);
+free(temp);
+}
+}
+void delet_end()
+{
+NODE temp,prev;
+temp=first;
+if(temp->next==NULL)
+first=NULL;
+else
+{
+while(temp->next!=NULL)
+{
+prev=temp;
+temp=temp->next
+}
+prev->next=NULL;
+}
+printf("\nthe deleted student usn is:
+%s",temp->usn);
+}
+
+=======
+<<<<<<< HEAD
+void display()
+{
+NODE temp;
+int count=0;
+temp=first;
+if(first==NULL)
+printf("\nempty list\n");
+else
+{
+printf("\nUSN\t\tNAME\t\tBRANCH\t\tSEM\t\tPHNO");
+while(temp!=NULL)
+{
+printf("\n\n%s\t\t%s\t\t%s\t\t%d\t\t%s",temp->usn,temp->name,temp->branch,temp->sem,temp->phno);
+temp=temp->next;
+count++;
+}
+printf("\n\nthe number of nodes are %d",count);
+}
+}
+void stackdemo()
+{
+int ch;
+while(1)
+{
+printf("\n____STACK DEMONSTRATION____\n");
+printf("\n1.PUSH\n2.POP\n3.DISPLAY\n4.EXIT");
+=======
+void main() 
+{ 
+int sem,ch; 
+char name[20],usn[20],branch[20],num[20]; 
+clrscr(); 
+while(1)
+{
+printf("\n____MAIN MENU____\n");
+printf("\n1.CREATE(INSERT AT
+FRONT)\n2.DISPLAY\n3.DELETE AT
+FRONT\n4.INSERT AT END\n5.DELETE
+AT END\n6.STACK
+DEMONSTRATION\n7.EXIT");
+>>>>>>> b747889849d9d8f8fcfdc20c991a5f27890319bf
+printf("\nenter the choice\n");
+scanf("%d",&ch);
+switch(ch)
+{
+case 1:insert_front();
+break;
+<<<<<<< HEAD
+case 2:delet_front();
+break;
+case 3:display();
+break;
+case 4:return;
+default :printf("invalid choice\n");
+=======
+case 2:display();
+break;
+case 3:delet_front();
+break;
+case 4:insert_end();
+break;
+case 5:if(first==NULL)
+printf("list is empty\n");
+else
+delet_end();
+break;
+case 6:stackdemo();
+break;
+case 7:exit(0);
+default :printf("\n invalid selection");
+>>>>>>> b747889849d9d8f8fcfdc20c991a5f27890319bf
+break;
+}
+}
+}
+>>>>>>> df273bef49901ab21fbe94f22b9818df95107ee9
+>>>>>>> 87ddc1f3a6da89159f0308636c4eff7ffc3e0567
